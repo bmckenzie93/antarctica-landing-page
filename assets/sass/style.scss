@@ -1,1 +1,103 @@
-body {background: yellow;} 
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #FAFAFA;
+  font-family: 'Noto Sans', sans-serif; 
+} 
+
+// TYPOGRAPHY
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1 {
+  font: normal normal bold 43px/55px Noto Sans;
+  letter-spacing: 0px;
+  color: #041F38;
+}
+h2 {
+  font: normal normal bold 48px/58px Noto Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+h3 {
+  font: normal normal bold 32px/40px Noto Sans;
+  letter-spacing: 0px;
+  color: #3D3D3D;
+}
+p {
+  font: normal normal 600 18px/24px Noto Sans;
+  letter-spacing: 0px;
+  color: #3D3D3D;
+}
+
+// UTILITY CLASSES
+.container {
+  width: 66.666%;
+  max-width: 1200px;
+}
+
+.btn {
+  background-color: #107DE1; 
+  color: #FCFCFC;
+  font: normal normal 600 16px/22px Noto Sans;
+  padding: 8px 22px;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// MAIN HEADER
+.main-header {
+  padding: 22px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &--icon {
+    img {
+      height: 75px;
+    }
+  }
+
+  // MAIN HEADER NAVIGATION
+  &--nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      padding-right: 16px; 
+    }
+
+    a {
+      text-decoration: none;
+      color: #041F38;
+      font: normal normal 600 16px/22px Noto Sans;
+      padding: 8px 0;
+
+      &.active {
+        border-bottom: 2px solid #041F38;
+      }
+    }
+  }
+
+  // MAIN HEADER CALL TO ACTION
+  &--cta {
+    padding-left: 12px;
+  }
+}
