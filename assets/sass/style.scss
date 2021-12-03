@@ -19,6 +19,7 @@ h1 {
   font: normal normal bold 43px/55px Noto Sans;
   letter-spacing: 0px;
   color: #041F38;
+  margin-bottom: 36px;
 }
 h2 {
   font: normal normal bold 48px/58px Noto Sans;
@@ -34,12 +35,20 @@ p {
   font: normal normal 600 18px/24px Noto Sans;
   letter-spacing: 0px;
   color: #3D3D3D;
+  
+  &.lead {
+    font: normal normal 600 18px/24px Noto Sans;
+    letter-spacing: 0px;
+    color: #3D3D3D;
+    margin-bottom: 36px;
+  }
 }
 
 // UTILITY CLASSES
 .container {
   width: 66.666%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -53,15 +62,24 @@ p {
     cursor: pointer;
   }
 }
+.link {
+  font: normal normal 600 16px/22px Noto Sans;
+  letter-spacing: 0px;
+  color: #107DE1;
+  text-decoration: none;
+  padding: 8px 22px;
+}
+
 
 // MAIN HEADER
 .main-header {
   padding: 22px 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   &--icon {
@@ -100,4 +118,128 @@ p {
   &--cta {
     padding-left: 12px;
   }
+}
+
+
+// MAIN SECTION
+.main-section {
+  &--background {
+    position: absolute;
+    z-index: -1;
+    min-height: 500px;
+  }
+
+  .container {
+    min-height: 1400px;
+    position: relative;
+  }
+}
+
+// HERO
+.hero {
+  display: flex;
+  min-height: 500px;
+  margin-bottom: 170px;
+
+  &--left {
+    width: 50%;
+    margin-right: 30%;
+    margin-top: 150px;
+  }
+
+  &--content-cta {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-right: 30px;
+    }
+  }
+
+  &--right {
+    width: 50%;
+    position: relative;
+
+    .card-1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .card-2 {
+      position: absolute;
+      bottom: -65px;
+      left: -50%;
+    }
+
+    .slider-buttons {
+      position: absolute;
+      display: flex;
+      bottom: -65px;
+      right: 40%;
+
+      & > div {
+        &:not(:last-child) {
+          margin-right: 13px;
+        }
+      }
+    }
+
+    .slider-button--one,
+    .slider-button--two {
+      height: 13px;
+      width: 13px;
+      border-radius: 50%;
+      background-color: #3D3D3D;
+      opacity: .2; 
+
+      &:hover {
+        cursor: pointer
+      }
+
+      &.active {
+        background-color: #107DE1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// BODY SECTION
+.body-section {
+  display: flex;
+
+  &--left {
+    width: 50%;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: -85px;
+      z-index: -1;
+    }
+    
+    h2 {
+      position: absolute;
+      left: 80px;
+      top: 195px;
+    }
+  }
+  &--right {
+    width: 50%;
+
+    .form {
+      margin: 0 auto;
+      height: 750px;
+      background-color: gray;
+      margin: 0 35px;
+    }
+  }
+}
+
+
+// GALLERY SECTION
+.gallery-section {
+  
 }
