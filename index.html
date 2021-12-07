@@ -37,14 +37,16 @@
     <div class="container">
       <!-- Main Header Icon -->
       <div class="main-header--icon">
-        <img src="./assets/images/main-icon.svg" alt="Pacific sound and vision icon">
+        <a href="#">
+          <img src="./assets/images/main-icon.svg" alt="Pacific sound and vision icon">
+        </a>
       </div>
   
       <!-- Main Header Navigation -->
       <nav class="main-header--nav">
         <ul>
           <li><a href="https://www.pacificsv.org/psv-bootcamp">PSV Bootcamp</a></li>
-          <li><a class="active" href="https://www.pacificsv.org/antarctica">Antarctica</a></li>
+          <li class="active"><a href="https://www.pacificsv.org/antarctica">Antarctica</a></li>
         </ul>
         <!-- Main Header Call To Action -->
         <div class="main-header--cta">
@@ -56,126 +58,287 @@
   </header>
 
   <main class="main-section">
-    <div class="container">
-      <img class="main-section--background" src="./assets/images/bg-swerl.svg" alt="Background swerl design">
+    <img class="main-section--background" src="./assets/images/bg-swerl.svg" alt="Background swerl design">
 
     <!-- Hero Section -->
     <section class="hero">
-      <!-- Hero Left -->
-      <div class="hero--left">
-        <div class="hero--content">
-          <h1>
-            If you live on this planet, you can thank Antarctica.
-          </h1>
-          <p class="lead">
-            The science is clear. We are facing the two most profound 
-            environmental challenges of our existence&mdash;climate change 
-            and loss of biodiversity.
-          </p>
-          <div class="hero--content-cta">
-            <button class="btn">
-              Take action now
-            </button>
-            <a href="#" class="link">
-              Watch video!
-            </a>
+      <div class="container">
+        <!-- Hero Left -->
+        <div class="hero--left">
+          <div class="hero--content">
+            <h1>
+              If you live on this planet, you can thank Antarctica.
+            </h1>
+            <p class="lead">
+              The science is clear. We are facing the two most profound 
+              environmental challenges of our existence&mdash;climate change 
+              and loss of biodiversity.
+            </p>
+            <div class="hero--content-cta">
+              <button class="btn">
+                Take action now
+              </button>
+              <a href="#" class="link">
+                Watch video!
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Hero Right -->
+        <div class="hero--right">
+          <img class="card-1" src="./assets/images/card-1.png" alt="1. Watch the video!">
+          <img class="card-2" src="./assets/images/card-2.png" alt="2. Read the facts.">
+          
+          <!-- Slider Buttons -->
+          <div class="slider-buttons">
+            <div class="slider-button--one active"></div>
+            <div class="slider-button--two"></div>
           </div>
         </div>
       </div>
-
-      <!-- Hero Right -->
-      <div class="hero--right">
-        <img class="card-1" src="./assets/images/card-1.png" alt="1. Watch the video!">
-        <img class="card-2" src="./assets/images/card-2.png" alt="2. Read the facts.">
-        
-        <!-- Slider Buttons -->
-        <div class="slider-buttons">
-          <div class="slider-button--one active"></div>
-          <div class="slider-button--two"></div>
-        </div>
-      </div>
-
     </section>
 
     <!-- Body Section -->
     <section class="body-section">
-      <div class="body-section--left">
-        <h2>
-          Our mission
-        </h2>
-        <img src="./assets/images/antarctica.png" alt="PSV is a noncommercial organization, whose mission is to sponsor, promote, and encourage the performing arts between the nations and cultures of the Pacific Rim.">
+      <div class="container">
+        <div class="body-section--left">
+          <h2>
+            Our mission
+          </h2>
+          <img src="./assets/images/antarctica.png" alt="PSV is a noncommercial organization, whose mission is to sponsor, promote, and encourage the performing arts between the nations and cultures of the Pacific Rim.">
+        </div>
+  
+        <!-- Form -->
+        <div class="body-section--right">
+          <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTtkfzTkmrnlKaKBwEeXz3JNYAA0OGHN9r6voGCMyanyJjAA/formResponse?embedded=true" method="post">
+            <!-- Form Header -->
+            <h3>
+              Call on CCAMLR to protect Antarctica!
+            </h3>
+  
+            <!-- Form Description -->
+            <div class="form--description">
+              <div class="form--description-content">
+                <p class="form--description-paragraph">
+                  Did you know Antarctica regulates our climate, and its 
+                  waters feed the fish that feed the world? But who protects 
+                  Antarctica and its ocean? One international organization does, 
+                  called CCAMLR (Commission on the Conservation of Antarctic Marine 
+                  Living Resources). This year it has the power to create three 
+                  marine protected areas: the East Antarctic MPA proposal, the 
+                  Weddell Sea MPA proposal, and the Antarctic Peninsula MPA 
+                  proposal—the largest act of ocean protection in history! 
+                </p>
+                <p class="form--description-paragraph">
+                  Your voice matters. Add your name to the petition urging Joe Biden 
+                  (President of the United States), Emmanuel Macron (President of France), 
+                  Angela Merkel (Chancellor of Germany), Ursula von der Leyen (President of 
+                  the European Commission), Vladimir Putin (President of Russia), Xi Jinping 
+                  (President of China), and other leaders from CCAMLR member nations to protect 
+                  Antarctica’s waters. We will deliver the signatures to them, which will exemplify 
+                  the outpour of public support for them to act at CCAMLR this year.
+                </p>
+              </div>
+  
+              <div class="form--description-buttons">
+                <div class="form--description-buttons-1 active"></div>
+                <div class="form--description-buttons-2"></div>
+              </div>
+            </div>
+  
+            <!-- email -->
+            <input type="email" name="entry.1031413343" placeholder="Email*" required>
+  
+            <!-- first name -->
+            <input type="text" name="entry.1200818941" placeholder="Full name*" required>
+  
+            <!-- last name -->
+            <input type="text" name="entry.1628133020" placeholder="Last name*"  required>
+  
+            <!-- country -->
+            <input type="text" name="entry.1416597222" placeholder="Country*" required>
+  
+            <!-- submit -->
+            <input class="btn" type="submit" value="Sign the petition">
+  
+            <!-- Form Terms Of Service -->
+            <span class="form--tos">
+              This site is protected by reCAPTCHA and the 
+              <a href="https://policies.google.com/privacy?hl=en-US">Google Privacy Policy</a>
+              and 
+              <a href="https://policies.google.com/terms?hl=en-US">Terms of Service apply</a>
+            </span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+
+      <!-- Gallery - Quote Section -->
+      <div class="gallery-section--quote-container">
+        <!-- Quote Image -->
+        <div class="gallery-section--quote-container-image">
+          <img src="./assets/images/raft-lg.png" alt="People on a raft in front of an iceberg.">
+        </div>
+
+        <!-- Quote Blockquote -->
+        <div class="gallery-section--quote-container-blockquote">
+          <blockquote>
+            If we can’t protect perhaps the most beautiful, most raw place on 
+            our planet, can we protect ourselves? Together, we can change the 
+            future for Antarctica and for humanity.
+          </blockquote>
+          <!-- testimonial -->
+          <div class="gallery-section--quote-container-testimonial">
+            <div class="gallery-section--quote-container-testimonial-image">
+              <img src="" alt="(x)">
+            </div>
+            <div class="gallery-section--quote-container-testimonial-info">
+              <span class="gallery-section--quote-container-testimonial-name">John Doe</span>
+              <span class="gallery-section--quote-container-testimonial-title">Title/designation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Glacier -->
+        <img class="gallery-section--quote-container-glacier" src="./assets/images/Iceberg-blur.svg" alt="Decorative iceberg icon">
       </div>
 
-      <!-- Form -->
-      <div class="body-section--right">
-        <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTtkfzTkmrnlKaKBwEeXz3JNYAA0OGHN9r6voGCMyanyJjAA/formResponse?embedded=true" method="post">
-          <!-- Form Header -->
-          <h3>
-            Call on CCAMLR to protect Antarctica!
-          </h3>
+      <!-- Gallery - Grid Section -->
+      <div class="gallery-section--grid-section">
+        <header>
+          <h2>
+            Save our planet
+          </h2>
+          <p>
+            Only one way to do this: Together.
+          </p>
+        </header>
 
-          <!-- Form Description -->
-          <div class="form--description">
-            <div class="form--description-content">
-              <p class="form--description-paragraph">
-                Did you know Antarctica regulates our climate, and its 
-                waters feed the fish that feed the world? But who protects 
-                Antarctica and its ocean? One international organization does, 
-                called CCAMLR (Commission on the Conservation of Antarctic Marine 
-                Living Resources). This year it has the power to create three 
-                marine protected areas: the East Antarctic MPA proposal, the 
-                Weddell Sea MPA proposal, and the Antarctic Peninsula MPA 
-                proposal—the largest act of ocean protection in history! 
-              </p>
-              <p class="form--description-paragraph">
-                Your voice matters. Add your name to the petition urging Joe Biden 
-                (President of the United States), Emmanuel Macron (President of France), 
-                Angela Merkel (Chancellor of Germany), Ursula von der Leyen (President of 
-                the European Commission), Vladimir Putin (President of Russia), Xi Jinping 
-                (President of China), and other leaders from CCAMLR member nations to protect 
-                Antarctica’s waters. We will deliver the signatures to them, which will exemplify 
-                the outpour of public support for them to act at CCAMLR this year.
-              </p>
-            </div>
+        <div class="flex">
+          <div class="left">
+            <div class="image-grid-1">
+              <div class="box-1">
+                <img src="./assets/images/youtube-screenshot.png" alt="Call on CCAMLR ro protect Antarctica">
+              </div>
 
-            <div class="form--description-buttons">
-              <div class="form--description-buttons-1 active"></div>
-              <div class="form--description-buttons-2"></div>
+              <div class="box-2">
+                <img src="./assets/images/glacier-2.png" alt="Glacier">
+                <!-- <img class="elipse" src="./assets/images/tail.png" alt="Whale tail"> -->
+              </div>
+
+              <div class="box-3">
+                <img src="./assets/images/bridge.png" alt="People on a raft floating under an ice bridge">
+              </div>
             </div>
           </div>
 
-          <!-- email -->
-          <input type="email" name="entry.1031413343" placeholder="Email*" required>
+          <div class="right">
+            <div class="box-1">
+              <img src="./assets/images/glacier-1.png" alt="Glacier">
+            </div>
+            <div class="box-2">
+              <img src="./assets/images/penguen-1.png" alt="A penguen standing  ">
+            </div>
+          </div>
+        </div>
+        
+        <div class="image-grid-2">
+          <div class="box-1">
+            <img src="./assets/images/penguen-2.png" alt="A penguen standing in the sun">
+          </div>
+          <div class="box-2">
+            <img src="./assets/images/island.png" alt="A lone iceberg">
+          </div>
+        </div>
 
-          <!-- first name -->
-          <input type="text" name="entry.1200818941" placeholder="Full name*" required>
+        <div class="image-grid-mobile">
 
-          <!-- last name -->
-          <input type="text" name="entry.1628133020" placeholder="Last name*"  required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Link Section -->
+    <section class="link-section">
+      <div class="container">
+        <!-- Link Section Left -->
+        <div class="link-section-left">
+          <header>
+            <h3>
+              Pacific Sound And Vision
+            </h3>
+            <p>
+              Help rebuild ocean life,
+              <br> 
+              for people and the planet
+            </p>
+          </header>
 
-          <!-- country -->
-          <input type="text" name="entry.1416597222" placeholder="Country*" required>
-
-          <!-- submit -->
-          <input class="btn" type="submit" value="Sign the petition">
-
-          <!-- Form Terms Of Service -->
-          <span class="form--tos">
-            This site is protected by reCAPTCHA and the 
-            <a href="https://policies.google.com/privacy?hl=en-US">Google Privacy Policy</a>
-            and 
-            <a href="https://policies.google.com/terms?hl=en-US">Terms of Service apply</a>
-          </span>
-        </form>
+          <!-- Social Links -->
+          <ul class="social-links">
+            <li>
+              <a href="#">
+                <img src="./assets/images/facebook-icon.svg" alt="Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/www-icon.svg" alt="WWW">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/youtube-icon.svg" alt="YouTube">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/instagram-icon.svg" alt="Instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Link Section Right -->
+        <div class="link-section-right">
+          <header>
+            <h4>
+              Menu
+            </h4>
+          </header>
+  
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Our database</a></li>
+              <li><a href="#">Our festival</a></li>
+              <li><a href="#">PSV bootcamp</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <span>
+          © 2021 Pacific Sound And Vision. All Right Reserved
+        </span>
 
-    </section>
-  </div>
-  </main>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+
 
 
 
