@@ -32,9 +32,18 @@
   <!-- end meta data from existing page -->
 </head>
 
-<body>
+<body id="body">
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <div class="modal-close" id="modalClose">
+        <img src="./assets/images/x.svg" alt="Close video">
+      </div>
+      <iframe width="100%" height="100%" id="iFrame" src="https://www.youtube.com/embed/Rqyb4SabSgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!-- Main Header -->
-  <header class="main-header">
+  <header class="main-header" id="header">
     <div class="container">
       <!-- Main Header Icon -->
       <div class="main-header--icon">
@@ -44,7 +53,7 @@
       </div>
       
       <!-- Main Header Navigation -->
-      <nav class="main-header--nav">
+      <nav class="main-header--nav" id="mainNav">
         <ul>
           <li><a href="https://www.pacificsv.org/psv-bootcamp">PSV Bootcamp</a></li>
           <li class="active"><a href="https://www.pacificsv.org/antarctica">Antarctica</a></li>
@@ -54,11 +63,29 @@
           <a href="#takeAction" class="btn" id="mainHeaderCTA">Take action now</a>
         </div>
       </nav>
+
+      <!-- Mobile Hamburger Icon -->
+      <img id="hamburger" class="main-header--hamburger" src="./assets/images/hamburger.svg" alt="Toggle mobile menu">
     </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu--backdrop" id="mobileBackdrop"></div>
+    <nav class="mobile-menu hide" id="mobileMenu">
+      <img class="mobile-menu--close" id="mobileClose" src="./assets/images/menu-right.svg" alt="Close mobile">
+      <!-- Main Header Call To Action -->
+      <div class="main-header--cta">
+        <a href="#takeAction" class="btn" id="mainHeaderCTA">Take action now</a>
+      </div>
+      <ul>
+        <li><a href="https://www.pacificsv.org/psv-bootcamp">PSV Bootcamp</a></li>
+        <li class="active"><a href="https://www.pacificsv.org/antarctica">Antarctica</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="main-section">
-    <img class="main-section--background" src="./assets/images/bg-swerl.svg" alt="Background swerl design">
+  <main class="main-section" id="main">
+    <img class="main-section--background" id="mainBg1" src="./assets/images/bg-swerl.svg" alt="Background swerl design">
+    <img class="main-section--background-2 hide" id="mainBg2" src="./assets/images/bg-swerl2.svg" alt="Background swerl design">
 
     <!-- Hero Section -->
     <section class="hero">
@@ -78,7 +105,7 @@
               <a href="#takeAction" class="btn">
                 Take action now
               </a>
-              <a href="#" class="link">
+              <a class="link" id="watchVideo">
                 Watch video!
               </a>
             </div>
@@ -87,13 +114,17 @@
   
         <!-- Hero Right -->
         <div class="hero--right">
-          <img class="card-1" src="./assets/images/card-1.png" alt="1. Watch the video!">
-          <img class="card-2" src="./assets/images/card-2.png" alt="2. Read the facts.">
+          <img class="card-1" src="./assets/images/card-1.png" alt="1. Watch the video!" id="card1">
+          <img class="card-2" src="./assets/images/card-2.png" alt="2. Read the facts." id="card2">
+          <a href="#takeAction">
+            <img class="card-3 hide" src="./assets/images/card-3.png" alt="3. Sign the petition!" id="card3">
+          </a>
+          <img class="card-4 hide" src="./assets/images/card-4.png" alt="4. Save the planet." id="card4"> 
           
           <!-- Slider Buttons -->
           <div class="slider-buttons">
-            <div class="slider-button--one active"></div>
-            <div class="slider-button--two"></div>
+            <div class="slider-button--one active" id="sliderBtn1"></div>
+            <div class="slider-button--two" id="sliderBtn2"></div>
           </div>
         </div>
       </div>
@@ -119,7 +150,7 @@
   
             <!-- Form Description -->
             <div class="form--description">
-              <div class="form--description-content">
+              <div class="form--description-content" id="formContent">
                 <p class="form--description-paragraph">
                   Did you know Antarctica regulates our climate, and its 
                   waters feed the fish that feed the world? But who protects 
@@ -142,8 +173,8 @@
               </div>
   
               <div class="form--description-buttons">
-                <div class="form--description-buttons-1 active"></div>
-                <div class="form--description-buttons-2"></div>
+                <div class="form--description-buttons-1 active" id="formBtn1"></div>
+                <div class="form--description-buttons-2" id="formBtn2"></div>
               </div>
             </div>
   
@@ -173,24 +204,23 @@
         </div>
       </div>
     </section>
-
-    <!--  -->
   </main>
 
   <!-- Gallery Section -->
-  <section class="gallery-section">
+  <section class="gallery-section" id="gallery">
     <div class="container">
 
       <!-- Gallery - Quote Section -->
-      <div class="gallery-section--quote-container">
+      <div class="gallery-section--quote-container" id="glacierContainer">
         <!-- Quote Image -->
         <div class="gallery-section--quote-container-image">
-          <img src="./assets/images/raft-lg.png" alt="People on a raft in front of an iceberg.">
+          <img src="./assets/images/raft-sm.png" alt="People on a raft in front of an iceberg.">
         </div>
 
         <!-- Quote Blockquote -->
         <div class="gallery-section--quote-container-blockquote">
           <blockquote>
+            <img src="./assets/images/quote-left.svg" alt="Quotation marks">
             If we can’t protect perhaps the most beautiful, most raw place on 
             our planet, can we protect ourselves? Together, we can change the 
             future for Antarctica and for humanity.
@@ -198,17 +228,18 @@
           <!-- testimonial -->
           <div class="gallery-section--quote-container-testimonial">
             <div class="gallery-section--quote-container-testimonial-image">
-              <img src="" alt="(x)">
+              <img src="./assets/images/paul-nicklen.png" alt="Paul Nicklen">
             </div>
             <div class="gallery-section--quote-container-testimonial-info">
-              <span class="gallery-section--quote-container-testimonial-name">John Doe</span>
-              <span class="gallery-section--quote-container-testimonial-title">Title/designation</span>
+              <span class="gallery-section--quote-container-testimonial-name">Paul Nicklen</span>
+              <span class="gallery-section--quote-container-testimonial-title">Photographer</span>
             </div>
           </div>
         </div>
 
         <!-- Animated Glacier -->
-        <img class="gallery-section--quote-container-glacier" src="./assets/images/Iceberg-blur.svg" alt="Decorative iceberg icon">
+        <img class="gallery-section--quote-container-glacier" src="./assets/images/Iceberg-blur.svg" alt="Decorative iceberg icon" id="glacier">
+        <img class="gallery-section--quote-container-glacier-outline" src="./assets/images/glacier-outline.svg" alt="Decorative iceberg icon" id="glacierOutline">
       </div>
 
       <!-- Gallery - Grid Section -->
@@ -225,17 +256,20 @@
         <div class="flex">
           <div class="left">
             <div class="image-grid-1">
-              <div class="box-1">
+              <div class="box-1" id="youtubeImage">
                 <img src="./assets/images/youtube-screenshot.png" alt="Call on CCAMLR ro protect Antarctica">
               </div>
 
               <div class="box-2">
-                <img src="./assets/images/glacier-2.png" alt="Glacier">
-                <!-- <img class="elipse" src="./assets/images/tail.png" alt="Whale tail"> -->
+                <img class="image" src="./assets/images/glacier-2.png" alt="Glacier">
+                <img class="elipse-bg" src="./assets/images/elipse-bg.svg" alt="Decorative image shadow">
+                <img class="elipse" src="./assets/images/tail.png" alt="Whale tail">
               </div>
-
+              
               <div class="box-3">
-                <img src="./assets/images/bridge.png" alt="People on a raft floating under an ice bridge">
+                <img class="image" src="./assets/images/bridge.png" alt="People on a raft floating under an ice bridge">
+                <img class="elipse-bg" src="./assets/images/elipse-bg.svg" alt="Decorative image shadow">
+                <img class="elipse" src="./assets/images/seal-elipse.png" alt="Seal">
               </div>
             </div>
           </div>
@@ -340,17 +374,6 @@
       </ul>
     </div>
   </footer>
-
-
-
-
-
-  <!-- Global site tag (gtag.js) - Google Ads: 443906308 --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-443906308"></script> 
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-443906308');</script>
-  <script type="text/javascript" data-sqs-type="imageloader-bootstrapper">(function() {if(window.ImageLoader) { window.ImageLoader.bootstrap({}, document); }})();</script>
-  <script>Squarespace.afterBodyLoad(Y);</script>
-  <!-- End Global site tag (gtag.js) - Google Ads: 443906308 --> 
   <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
