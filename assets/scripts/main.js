@@ -17,6 +17,7 @@ const body = document.getElementById('body'),
       card1 = document.getElementById('card1'),
       card2 = document.getElementById('card2'),
       card3 = document.getElementById('card3'),
+      card3Link = document.getElementById('card3Link'),
       card4 = document.getElementById('card4'),
       watchVideo = document.getElementById('watchVideo'),
       sliderBtn1 = document.getElementById('sliderBtn1'),
@@ -28,7 +29,8 @@ const body = document.getElementById('body'),
       glacierOutline = document.getElementById('glacierOutline'),
       glacierContainer = document.getElementById('glacierContainer'),
       youtubeImage = document.getElementById('youtubeImage'),
-      iFrame = document.getElementById('iFrame')
+      iFrame = document.getElementById('iFrame'),
+      mobileiFrame = document.getElementById('mobileiFrame')
 
 
 // MODAL
@@ -81,6 +83,7 @@ const showSlideOne = () => {
   card1.classList.remove('hide')
   card2.classList.remove('hide')
   card3.classList.add('hide')      
+  card3Link.classList.add('hide')      
   card4.classList.add('hide')
   sliderBtn1.classList.add('active')
   sliderBtn2.classList.remove('active')
@@ -91,6 +94,7 @@ const showSlideTwo = () => {
   card1.classList.add('hide')
   card2.classList.add('hide')
   card3.classList.remove('hide')
+  card3Link.classList.remove('hide')
   card4.classList.remove('hide')
   sliderBtn1.classList.remove('active')
   sliderBtn2.classList.add('active')

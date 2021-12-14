@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,6 @@
   <meta name="twitter:url" content="https://www.pacificsv.org/antarctica"/>
   <meta name="twitter:card" content="summary"/>
   <meta name="description" content="" />
-  <link rel="preconnect" href="https://images.squarespace-cdn.com">
   <!-- end meta data from existing page -->
 </head>
 
@@ -116,7 +115,7 @@
         <div class="hero--right">
           <img class="card-1" src="./assets/images/card-1.png" alt="1. Watch the video!" id="card1">
           <img class="card-2" src="./assets/images/card-2.png" alt="2. Read the facts." id="card2">
-          <a href="#takeAction">
+          <a href="#takeAction" class="card-3-link hide" id="card3Link">
             <img class="card-3 hide" src="./assets/images/card-3.png" alt="3. Sign the petition!" id="card3">
           </a>
           <img class="card-4 hide" src="./assets/images/card-4.png" alt="4. Save the planet." id="card4"> 
@@ -130,6 +129,35 @@
       </div>
     </section>
 
+    <!-- Mobile Hero Section -->
+    <section class="mobile-hero">
+      <div class="container">
+        <div class="mobile-hero--video-container">
+          <div class="movile-hero--video-container-video">
+            <iframe class="video" width="100%" height="400px" id="mobileiFrame" src="https://www.youtube.com/embed/Rqyb4SabSgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <img class="bg-1" src="./assets/images/cliff.png" alt="Ice cliff">
+          <img class="bg-2" src="./assets/images/penguen-pink-eye.png" alt="Penguen portrait">
+        </div>
+
+        <div class="mobile-hero--content">
+          <h1>
+            If you live on this planet, you can thank Antarctica.
+          </h1>
+          <p class="lead">
+            The science is clear. We are facing the two most profound 
+            environmental challenges of our existence&mdash;climate change 
+            and loss of biodiversity.
+          </p>
+          <div class="hero--content-cta">
+            <a href="#takeAction" class="btn">
+              Take action now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Body Section -->
     <section class="body-section" id="takeAction">
       <div class="container">
@@ -137,7 +165,7 @@
           <h2>
             Our mission
           </h2>
-          <img src="./assets/images/antarctica.png" alt="PSV is a noncommercial organization, whose mission is to sponsor, promote, and encourage the performing arts between the nations and cultures of the Pacific Rim.">
+          <img class="body-section--left-img" src="./assets/images/antarctica.png" alt="PSV is a noncommercial organization, whose mission is to sponsor, promote, and encourage the performing arts between the nations and cultures of the Pacific Rim.">
         </div>
   
         <!-- Form -->
