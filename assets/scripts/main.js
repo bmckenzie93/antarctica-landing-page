@@ -19,6 +19,7 @@ const body = document.getElementById('body'),
       card3 = document.getElementById('card3'),
       card3Link = document.getElementById('card3Link'),
       card4 = document.getElementById('card4'),
+      mobileCTA = document.getElementById('mobileCTA'),
       watchVideo = document.getElementById('watchVideo'),
       sliderBtn1 = document.getElementById('sliderBtn1'),
       sliderBtn2 = document.getElementById('sliderBtn2'),
@@ -65,6 +66,7 @@ const showMobile = () => {
   mobileMenu.classList.add('show')
   mobileBackdrop.classList.add('show')
   body.classList.add('modal-open')
+  mobileCTA.addEventListener('click', hideMobile)
 }
 const hideMobile = () => {
   mobileMenu.classList.add('hide')
@@ -74,7 +76,7 @@ const hideMobile = () => {
 }
 hamburger.addEventListener('click', showMobile)
 mobileClose.addEventListener('click', hideMobile)
-mobileBackdrop.addEventListener('click', hideMobile)
+mobileBackdrop.addEventListener('click', hideMobile)  
 
 
 
@@ -87,8 +89,8 @@ const showSlideOne = () => {
   card4.classList.add('hide')
   sliderBtn1.classList.add('active')
   sliderBtn2.classList.remove('active')
-  mainBg1.classList.remove('hide')
-  mainBg2.classList.add('hide')
+  main.classList.add('bg1')
+  main.classList.remove('bg2')
 }
 const showSlideTwo = () => {
   card1.classList.add('hide')
@@ -98,8 +100,8 @@ const showSlideTwo = () => {
   card4.classList.remove('hide')
   sliderBtn1.classList.remove('active')
   sliderBtn2.classList.add('active')
-  mainBg1.classList.add('hide')
-  mainBg2.classList.remove('hide')
+  main.classList.remove('bg1')
+  main.classList.add('bg2')
 }
 sliderBtn1.addEventListener('click', showSlideOne)
 sliderBtn2.addEventListener('click', showSlideTwo)

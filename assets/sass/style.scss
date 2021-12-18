@@ -15,7 +15,7 @@ body {
 
   &.modal-open {
     overflow: hidden;
-  }
+  } 
 } 
 
 
@@ -338,31 +338,30 @@ a.btn {
   &.modal-open { filter: blur(1.5rem); }
   padding-bottom: 80px;
   position: relative;
-
-  &--background,
-  &--background-2 {
-    opacity: 1;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 101%;
-    transition: all .3s ease-out;
-
-    &.hide {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-    }
-    &-2 {
-      top: 112px;
-      left: 450px;
-      width: 60%;
-      height: 95%;
-    }
-
-    @media(max-width: 1200px) {
-      opacity: 0;
-    }
+  min-height: 1612px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 2rem;
+  overflow-x: hidden;
+  @media(max-width: 1000px) {
+    margin: 0;
+  }
+  
+  &.bg1 {
+    background-image: url(../images/bg-swerl.svg);
+    
+        @media(max-width: 1200px) {
+          background-image: none;
+        }
+  }
+  &.bg2 {
+    background-image: url(../images/bg-swerl2.svg);
+    background-position-y: 104px;
+    
+        @media(max-width: 1200px) {
+          background-image: none;
+        }
   }
 }
 
@@ -374,9 +373,13 @@ a.btn {
     display: none;
   }
   
+  @media(max-width: 1200px) {
+    margin-bottom: 0;
+  }
+  
   .container {
     display: flex;
-    min-height: 500px;
+    // min-height: 500px;
   }
 
   &--left {
@@ -574,7 +577,7 @@ a.btn {
     .bg-2 {
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: -11px;
       z-index: -1;
       transform: translate(-50%, 70%);
       height: 100px;
@@ -653,6 +656,7 @@ a.btn {
   &--left {
     width: 50%;
     position: relative;
+    z-index: 2;
 
     @media(max-width: 1000px) {
       width: 100%;
@@ -666,6 +670,7 @@ a.btn {
       @media(max-width: 1000px) {
         position: static;
         width: 515px;
+        max-width: 100%;
         display: block;
         margin: 0 auto;
       }
@@ -683,10 +688,20 @@ a.btn {
         line-height: 58px;
         top: 160px;
       }
+      @media(max-width: 666px) {
+        top:35%;
+        transform: translateX(-50%);
+        line-height: 16px;
+        font-size: 16px;
+      }
+      @media(max-width: 330px) {
+        display: none;
+      }
     }
   }
   &--right {
     width: 50%;
+    z-index: 4;
 
     @media(max-width: 1000px) {
       width: 100%;
@@ -701,6 +716,14 @@ a.btn {
   background-color: #fff;
   box-shadow: 0px 10px 40px #0000000D;
   border-radius: 20px;
+  z-index: 3;
+
+  @media(max-width: 1000px) {
+    h3 {
+      font-size: 24px;
+      line-height: 31.2px;
+    }
+  }
 
   @media(max-width: 1000px) {
     margin: 0;
@@ -717,6 +740,10 @@ a.btn {
 
     &-paragraph {
       font: normal normal 16px/23px Noto Sans;
+      @media(max-width: 1000px) {
+        font-size: 14px;
+        line-height: 18.2px;
+      }
     }
     
     &-buttons {
@@ -755,12 +782,19 @@ a.btn {
     padding: 8px 0;
     font-size: 18px;
     margin: 28px 0 60px;
+    @media(max-width: 1000px) {
+      font-size: 16px;
+      margin: 20px 0 30px;
+    }
     
     &[type=submit] {
       border: 2px solid transparent;
       color: #fff;
       padding: 26px 0;
       margin-bottom: 16px;
+      @media(max-width: 1000px) {
+        padding: 16px 0;
+      }
 
       &:hover {
         cursor: pointer;
@@ -778,16 +812,19 @@ a.btn {
   
   &--tos {
     font-size: 16px;
-    opacity: .5;
+    opacity: .6;
+    @media(max-width: 1000px) {
+      font-size: 14px;
+    }
     a {
       color: #3D3D3D;
-      
     }
   }
 }
 
 // GALLERY SECTION
 .gallery-section {
+  img { object-fit: fill; }
   &.modal-open { filter: blur(1.5rem); }
   background-image: url(../images/gallery-background.svg);
   background-size: cover;
@@ -800,9 +837,26 @@ a.btn {
     align-items: center;
     position: relative;
     margin-bottom: 80px;
-
+    
+    @media(max-width: 1000px) {
+      display: block;
+    }
+    
     &-image {
       padding-right: 100px;
+      @media(max-width: 1200px) {
+        padding-right: 0;
+      }
+      @media(max-width: 1000px) {
+        width: 100%;
+      }
+      
+      img {
+        @media(max-width: 1000px) {
+          width: 100%;
+        }
+
+      }
     }
     
     &-blockquote {
@@ -810,11 +864,25 @@ a.btn {
 
       blockquote {
         position: relative;
+        @media(max-width: 1200px) {
+          display: flex;
+          padding-right: 40px;
+          font-size: 18px;
+        }
 
         img {
           position: absolute;
           top: 0;
           left: -48px;
+
+          @media(max-width: 1200px) {
+            align-self: flex-start;
+            margin-right: 32px;
+          }
+          
+          @media(max-width: 1000px) {
+            position: static;
+          }
         }
       }
     }
@@ -822,6 +890,10 @@ a.btn {
     &-testimonial {
       display: flex;
       max-height: 40px; 
+      @media(max-width: 1000px) {
+        margin-left: 64px;
+        margin-top: 32px;
+      }
       
       &-image { margin-right: 16px; }
       &-name { 
@@ -840,12 +912,20 @@ a.btn {
       opacity: .95;
       top: 134px;
       right: -60px;
+
+      @media(max-width: 1200px) {
+        display: none;
+      }
       
       &-outline {
         transition: all 1 ease-in-out; 
         position: absolute;
         top: 134px;
         right: -60px;
+        
+        @media(max-width: 1200px) {
+          display: none;
+        }
       }
     }
   }
@@ -853,6 +933,75 @@ a.btn {
   &--grid-section {
     padding-bottom: 120px;
     border-bottom: 3px solid #107DE1;
+
+    & > .flex {
+      @media(max-width: 1200px) {
+        flex-direction: column;
+      }
+
+      .right {
+        margin-left: 8px;
+        position: relative;
+
+        @media(max-width: 1200px) {
+          margin-bottom: 8px;
+          margin-left: 0;
+        }
+
+        .elipse-container {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 50%);
+
+          
+          
+          @media(min-width: 1200px) {
+            display: none;
+          }
+
+          .elipse {
+            position: absolute;
+            top: -56px;
+            left: -80px;
+            width: 150px;
+            height: 150px;
+          }
+
+          .elipse-bg {
+            position: absolute;
+            top: -62px;
+            left: -91px;
+            width: 150px;
+            height: 150px;
+          }
+        }
+
+        .box-1 {
+          @media(max-width: 1200px) {
+            display: flex;
+            gap: 16px;
+          }
+          .hide {
+            display: none;
+            @media(max-width: 1200px) {
+              display: block;
+              width: calc(50% - 8px);
+              max-height: 400px;
+              margin-right: auto;
+            }
+          }
+          .resize {
+            width: calc(50% - 8px);
+            max-height: 400px;
+            @media(min-width: 1200px) {
+              width: 100%;
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+    }
     header {
       display: block;
       text-align: center;
@@ -863,6 +1012,10 @@ a.btn {
         margin-top:16px; 
         color: #fff;  
       }
+
+      @media(max-width: 1000px) {
+        h2 { font-size: 24px; }
+      }
     }
 
     .left { 
@@ -870,6 +1023,10 @@ a.btn {
       margin-right: 16px;
       height: 0px;
       gap: 16px;
+
+      @media(max-width: 1200px) {
+        margin-right: 0;
+      }
     }
     .right { 
       flex: 1; 
@@ -881,7 +1038,12 @@ a.btn {
       .box-2 { 
         flex: 2; 
         img {
-          height: calc(100% - 8px);  
+          height: 443px; 
+          margin-bottom: 8px; 
+
+          @media(max-width: 1200px) {
+            display: none;
+          }
         }
       }
     }
@@ -891,7 +1053,16 @@ a.btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
+    gap: 16px;
+
+    @media(min-width: 1505px) {
+      column-gap: 29px;
+    }
+    
+    @media(max-width: 1200px) {
+      grid-template-rows: repeat(1, 1fr);
+      margin-bottom: 16px;
+    }
     
     .box {
       &-1 {
@@ -905,18 +1076,32 @@ a.btn {
       &-2 {
         grid-column: 1/2;
         grid-row: 2/3;
-        height: 50%;
+        height: 57%;
         position: relative;
+
+        @media(min-width: 1500px) {
+          height: 50%
+        }
 
         .image {
           height: 100%;
+
+          @media(max-width: 1200px) {
+            height: auto;
+          }
         }
 
         .elipse {
           position: absolute;
           height: 250px;
           width: 250px;
-          transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%);
+          
+          @media(max-width: 1200px) {
+            height: 150px;
+            width: 150px;
+            transform: translate(-50%, -50%);
+          }
           
         }
         .elipse-bg {
@@ -925,39 +1110,97 @@ a.btn {
           width: 250px;
           transform: translate(-45%, -45%);
           
+          @media(max-width: 1200px) {
+            height: 150px;
+            width: 150px;
+            transform: translate(-45%, -45%);
+          }
         }
       }
       &-3 {
         grid-column: 2/3;
         grid-row: 2/3;
-        height: 50%;
+        height: 57%;
+
+        @media(min-width: 1500px) {
+          height: 50%
+        }
 
         .image {
           height: 100%;
+
+          @media(max-width: 1200px) {
+            height: auto;
+          }
         }
   
         .elipse {
           position: absolute;
           height: 250px;
           width: 250px;
-          transform: translate(-50%, 50%)
+          transform: translate(-50%, 50%);
+          z-index: 2;
           
+          @media(max-width: 1200px) {
+            display: none;
+          }
         }
         .elipse-bg {
           position: absolute;
           height: 250px;
           width: 250px;
           transform: translate(-55%, 45%);
+          z-index: 1;
           
+          @media(max-width: 1200px) {
+            display: none;
+          }
         }
       }
     }
+
   }
+
   .image-grid-2 {
     display: flex;
     gap: 16px;
-    .box-1 { flex: 1; }
-    .box-2 { flex: 2; height: 100%; }
+
+    @media(min-width: 1505px) {
+      margin-top: 8px;
+    }
+
+    @media(max-width: 1200px) {
+      margin-top: 16px;
+    }
+    .box-1 { 
+      flex: 1; 
+
+      @media(max-width: 1200px) {
+        display: none;
+      }
+
+      img {
+        @media(min-width: 1200px) {
+          height: 400px;
+          max-width: 381px;
+        }
+      }
+    }
+
+    .box-2 { 
+      flex: 2; 
+      height: 100%; 
+
+      @media(max-width: 1200px) {
+        max-height: 400px;
+      }
+
+      img {
+        @media(min-width: 1200px) {
+          height: 400px;
+        }
+      }
+    }
   }
 
   .box {
@@ -966,7 +1209,6 @@ a.btn {
     &-3,
     &-4,
     &-5 { img {width: 100%;} }
-
   }
 }
 
@@ -978,6 +1220,14 @@ a.btn {
     padding: 65px 48px 65px 30px;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 32px;
+    }
   }
   
   h3 {
@@ -994,11 +1244,20 @@ a.btn {
 
   header {
     padding-bottom: 65px;
+
+    @media(max-width: 900px) {
+      padding-bottom: 24px;
+    }
   }
+  
 
   ul { 
     list-style: none;
     margin-left: -18px;
+
+    @media(max-width: 900px) {
+      justify-content: center;
+    }
   }
 
   .social-links {
@@ -1028,20 +1287,43 @@ a.btn {
     display: flex;
     justify-content: space-between;
     padding: 40px 30px;
+    @media(max-width: 900px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     span {
       font: normal normal bold 13px/19px Noto Sans;
       letter-spacing: 0.39px;
       text-transform: capitalize;
       color: #fff;
+      @media(max-width: 900px) {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      br {
+        @media(min-width: 900px) {
+          display: none;
+        }
+      }
     }
 
     ul {
       display: flex;
       list-style: none;
+      @media(max-width: 900px) {
+        margin-left: 8px;
+      }
     }
 
-    li:not(:last-child) { margin-right: 50px; }
+    li:not(:last-child) { 
+      margin-right: 50px; 
+      @media(max-width: 900px) {
+        margin-right: 16px;
+      }
+    }
 
     a {
       font: normal normal bold 13px/19px Noto Sans;
