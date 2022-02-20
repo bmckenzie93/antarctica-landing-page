@@ -706,7 +706,43 @@ a.btn {
         line-height: 16px;
         font-size: 16px;
       }
-      @media(max-width: 330px) {
+      @media(max-width: 360px) {
+        display: none;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: 260px;
+      left: 72px;
+      color: #fff;
+      font: normal normal 16px/26px Noto Sans;
+      
+      @media(max-width: 1000px) {
+        transform: translateX(-126px);
+        left: 50%;
+        top: 210px;
+        font: normal normal 14px/20px Noto Sans;
+      }
+      @media(max-width: 666px) {
+        top:40%;
+        transform: translateX(-50%);
+        font: normal normal 12px/20px Noto Sans;
+        width: 270px;
+      }
+      @media(max-width: 500px) {
+        top:40%;
+        transform: translateX(-35%);
+        font: normal normal 10px/16px Noto Sans;
+        width: 270px;
+      }
+      @media(max-width: 400px) {
+        top:41%;
+        transform: translateX(-35%);
+        font: normal normal 10px/14px Noto Sans;
+        width: 270px;
+      }
+      @media(max-width: 360px) {
         display: none;
       }
     }
