@@ -340,7 +340,9 @@ a.btn {
       background-color: transparent;
       height: 100%;
 
-      &.show { display: block; }
+      &.show { 
+        display: block;
+      }
     }
   }
 }
