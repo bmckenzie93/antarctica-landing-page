@@ -216,16 +216,29 @@
   
             <!-- country -->
             <input type="text" name="entry.1416597222" placeholder="Country*" required>
-  
+            
+            <!-- news checkbox -->
+            <div class="form--checkbox-row">
+              <input type="checkbox" name="news" id="news">
+              <label for="news">I want to receive news, feature updates, discounts, and offers from Pacific Sound and Vision.</label>
+            </div>
+
+            <!-- privacy policy checkbox -->
+            <div class="form--checkbox-row">
+              <input type="checkbox" name="privacy-policy" id="privacy" required>
+              <label for="privacy">I acknowledge that I have read and agree to the <a href="https://policies.google.com/terms?hl=en-US" target="_blank">Terms and Conditions</a> and <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.</label>
+            </div>
+
             <!-- submit -->
             <input class="btn" type="submit" value="Sign the petition">
   
+
             <!-- Form Terms Of Service -->
             <span class="form--tos">
               This site is protected by the 
-              <a href="https://policies.google.com/privacy?hl=en-US">Google Privacy Policy,</a>
+              <a href="/privacy-policy.html" target="_blank">Privacy Policy,</a>
               and 
-              <a href="https://policies.google.com/terms?hl=en-US">Terms of Service</a> 
+              <a href="https://policies.google.com/terms?hl=en-US" target="_blank">Terms of Service</a> 
               apply.
             </span>
           </form>
@@ -286,6 +299,7 @@
             <div class="image-grid-1">
               <div class="box-1" id="youtubeImage">
                 <img src="./assets/images/01.png" alt="Blue digital graphic">
+                <img class="play-button" src="./assets/images/youtube-icon.svg" alt="play">
               </div>
 
               <div class="box-2">
@@ -406,8 +420,8 @@
       </span>
 
       <ul>
-        <li><a href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a></li>
-        <li><a href="https://policies.google.com/terms?hl=en-US">Terms of Service</a></li>
+        <li><a href="/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/terms?hl=en-US" target="_blank">Terms of Service</a></li>
       </ul>
     </div>
   </footer>
